@@ -1,4 +1,7 @@
+/* ! Inter font */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/* ! Raleway font */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 .font-inter {
@@ -7,4 +10,20 @@
 
 .font-raleway {
   font-family: "Raleway", sans-serif;
+}
+
+.custom-green-text {
+  color: #1dd100;
+}
+
+.custom-black-text {
+  color: #030712;
+}
+
+.custom-gray-text-06 {
+  color: rgba(3, 7, 18, 0.6);
+}
+
+.custom-green-bg {
+  background-color: #1dd100;
 }

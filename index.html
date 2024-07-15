@@ -12,12 +12,158 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- ! Daisy UI and tailwind cdn end -->
+    <link rel="stylesheet" href="./styles/style.css" />
 
     <title>FA Paribahan</title>
   </head>
-  <body class="bg-primary-green">
+  <body class="font-inter">
     <!-- ! Header starts -->
-    <header></header>
+    <header class="max-w-[1440px] mx-auto mt-2 lg:px-[135px] lg:mt-12">
+      <!-- ? Navbar starts-->
+      <div class="navbar bg-base-100 px-4 lg:mb-8">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost p-0 lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-lg"
+            >
+              <li><a>Home</a></li>
+              <li>
+                <a>About</a>
+              </li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost font-extrabold text-2xl lg:text-4xl lg:p-0"
+            >FA-Ticket</a
+          >
+        </div>
+
+        <div class="navbar-center hidden lg:flex">
+          <ul
+            class="menu menu-horizontal px-1 text-lg font-medium text-[#030712b2]"
+          >
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Destination</a></li>
+            <li><a>Search</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <button
+            class="flex items-center justify-center gap-2.5 border border-[#1dd10066] bg-[#1dd10019] custom-green-text rounded-xl font-bold py-2 px-4 lg:text-xl lg:py-4 lg:px-8"
+          >
+            <span>Bus</span>
+            <img class="mt-1" src="./images/bus-icon.png" alt="" />
+          </button>
+        </div>
+      </div>
+      <!-- ? Navbar ends -->
+
+      <!-- ? Banner Starts -->
+      <section class="relative">
+        <!-- * banner image and contents -->
+        <div
+          class="hero min-h-[370px] lg:min-h-[550px] lg:rounded-[32px] overflow-hidden"
+          style="background-image: url(./images/banner.png)"
+        >
+          <div class="hero-overlay bg-opacity-30"></div>
+          <div class="hero-content text-neutral-content text-center">
+            <div class="">
+              <h1
+                class="font-extrabold font-raleway text-3xl mb-3 lg:mb-4 lg:text-[64px] lg:max-w-[742px] mx-auto leading-snug text-white"
+              >
+                End-to-End Travel with<br /><span class="custom-green-text"
+                  >FA Paribahan</span
+                >
+              </h1>
+              <p
+                class="lg:max-w-[690px] mx-auto text-white leading-relaxed mb-6 lg:text-lg lg:mb-8"
+              >
+                Book Your Journey with FA Paribahan - Comfort, Convenience, and
+                Reliability at Your Fingertips!
+              </p>
+              <button
+                class="custom-green-bg rounded-xl text-xl font-raleway font-bold custom-black-text px-4 py-2.5 lg:px-8 lg:py-5 hover:bg-green-500 duration-150"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- * banner info cards -->
+        <div
+          class="grid grid-cols-1 mt-4 space-y-4 px-4 lg:grid-cols-[308px_308px_308px] justify-center lg:space-y-0 lg:absolute lg:-bottom-[71px] lg:left-[50%] lg:right-[50%] lg:gap-6"
+        >
+          <!-- Card 1 -->
+          <div
+            class="bg-white border-[2px] border-[#1dd100] flex items-center gap-4 p-5 rounded-xl lg:rounded-3xl lg:p-8 lg:border-x-0 lg:border-t-0 lg:border-b-[3px] lg:border-b-[#1dd100]"
+          >
+            <div class="card-image">
+              <img src="./images/people.png" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h2 class="font-bold custom-black-text mb-2 text-2xl lg:text-4xl">
+                500K+
+              </h2>
+              <p class="custom-gray-text-06 lg:text-lg">Registered users</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white border-[2px] border-[#1dd100] flex items-center gap-4 p-5 rounded-xl lg:rounded-3xl lg:p-8 lg:border-x-0 lg:border-t-0 lg:border-b-[3px] lg:border-b-[#1dd100]"
+          >
+            <div class="card-image">
+              <img src="./images/people.png" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h2 class="font-bold custom-black-text mb-2 text-2xl lg:text-4xl">
+                500K+
+              </h2>
+              <p class="custom-gray-text-06 lg:text-lg">Registered users</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white border-[2px] border-[#1dd100] flex items-center gap-4 p-5 rounded-xl lg:rounded-3xl lg:p-8 lg:border-x-0 lg:border-t-0 lg:border-b-[3px] lg:border-b-[#1dd100]"
+          >
+            <div class="card-image">
+              <img src="./images/people.png" alt="" />
+            </div>
+
+            <div class="card-info">
+              <h2 class="font-bold custom-black-text mb-2 text-2xl lg:text-4xl">
+                500K+
+              </h2>
+              <p class="custom-gray-text-06 lg:text-lg">Registered users</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ? Banner Ends-->
+    </header>
     <!-- ! Header ends -->
 
     <!-- ! Main starts -->
