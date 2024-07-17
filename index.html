@@ -18,7 +18,9 @@
   </head>
   <body class="font-inter">
     <!-- ! Header starts -->
-    <header class="max-w-[1440px] mx-auto mt-2 lg:px-[135px] lg:mt-12">
+    <header
+      class="max-w-[1440px] mx-auto mt-2 mb-16 lg:px-[135px] lg:mt-12 lg:mb-[190px]"
+    >
       <!-- ? Navbar starts-->
       <div class="navbar bg-base-100 px-4 lg:mb-8">
         <div class="navbar-start">
@@ -58,7 +60,7 @@
 
         <div class="navbar-center hidden lg:flex">
           <ul
-            class="menu menu-horizontal px-1 text-lg font-medium text-[#030712b2]"
+            class="menu menu-horizontal px-1 text-lg font-medium text-[#030712b2] gap-10"
           >
             <li><a>Home</a></li>
             <li><a>About</a></li>
@@ -111,7 +113,7 @@
 
         <!-- * banner info cards -->
         <div
-          class="grid grid-cols-1 mt-4 space-y-4 px-4 lg:grid-cols-[308px_308px_308px] justify-center lg:space-y-0 lg:absolute lg:-bottom-[71px] lg:left-[50%] lg:right-[50%] lg:gap-6"
+          class="grid grid-cols-1 mt-4 space-y-4 px-4 lg:grid-cols-[308px_308px_308px] justify-center lg:space-y-0 lg:absolute lg:-bottom-[71px] lg:left-0 lg:right-0 lg:gap-6"
         >
           <!-- Card 1 -->
           <div
@@ -134,14 +136,14 @@
             class="bg-white border-[2px] border-[#1dd100] flex items-center gap-4 p-5 rounded-xl lg:rounded-3xl lg:p-8 lg:border-x-0 lg:border-t-0 lg:border-b-[3px] lg:border-b-[#1dd100]"
           >
             <div class="card-image">
-              <img src="./images/people.png" alt="" />
+              <img src="./images/ticket-cupon.png" alt="" />
             </div>
 
             <div class="card-info">
               <h2 class="font-bold custom-black-text mb-2 text-2xl lg:text-4xl">
-                500K+
+                1.7 lacks
               </h2>
-              <p class="custom-gray-text-06 lg:text-lg">Registered users</p>
+              <p class="custom-gray-text-06 lg:text-lg">Tickets sold</p>
             </div>
           </div>
 
@@ -150,14 +152,14 @@
             class="bg-white border-[2px] border-[#1dd100] flex items-center gap-4 p-5 rounded-xl lg:rounded-3xl lg:p-8 lg:border-x-0 lg:border-t-0 lg:border-b-[3px] lg:border-b-[#1dd100]"
           >
             <div class="card-image">
-              <img src="./images/people.png" alt="" />
+              <img src="./images/stoppage.png" alt="" />
             </div>
 
             <div class="card-info">
               <h2 class="font-bold custom-black-text mb-2 text-2xl lg:text-4xl">
-                500K+
+                80K+
               </h2>
-              <p class="custom-gray-text-06 lg:text-lg">Registered users</p>
+              <p class="custom-gray-text-06 lg:text-lg">Rental partners</p>
             </div>
           </div>
         </div>
@@ -167,7 +169,119 @@
     <!-- ! Header ends -->
 
     <!-- ! Main starts -->
-    <main></main>
+    <main>
+      <!-- ? Best offers section starts-->
+      <section class="best-offers-section max-w-[1202px] px-4 mx-auto">
+        <h2
+          class="font-raleway font-bold text-center text-2xl mb-6 lg:mb-12 lg:text-[2.5rem]"
+        >
+          Best offers for you
+        </h2>
+
+        <div
+          class="flex flex-col items-center justify-center gap-6 mb-6 lg:flex-row lg:mb-16"
+        >
+          <!--* coupon 1 -->
+          <div
+            class="flex bg-[#ffbf0f] max-w-xl min-w-[350px] rounded-3xl px-3 lg:px-[52px]"
+          >
+            <div class="flex flex-col justify-center lg:mr-11 flex-1">
+              <h3
+                class="font-extrabold custom-black-text leading-[1.8] text-xl lg:text-[2.5rem]"
+              >
+                15% OFF
+              </h3>
+
+              <p
+                class="custom-black-text font-semibold leading-[1.8] text-sm lg:text-xl"
+              >
+                on your next purchase
+              </p>
+
+              <p
+                class="custom-gray-text-05 leading-[1.8] font-medium text-sm lg:text-lg"
+              >
+                use by January 2024
+              </p>
+            </div>
+
+            <div class="max-h-[150px] lg:max-h-full">
+              <img class="h-full" src="./images/cupon-devider.png" alt="" />
+            </div>
+
+            <div
+              class="font-raleway flex flex-col justify-center text-center lg:ml-5"
+            >
+              <p
+                class="leading-[1.8] font-bold custom-black-text text-xl lg:text-[2rem]"
+              >
+                NEW15
+              </p>
+
+              <p
+                class="custom-gray-text-04 leading-[1.8] font-medium lg:text-xl"
+              >
+                Coupon Code
+              </p>
+            </div>
+          </div>
+
+          <!--* coupon 2 -->
+          <div
+            class="flex bg-[#ffbf0f] max-w-xl min-w-[350px] rounded-3xl px-3 lg:px-[52px]"
+          >
+            <div class="flex flex-col justify-center lg:mr-11 flex-1">
+              <h3
+                class="font-extrabold custom-black-text leading-[1.8] text-xl lg:text-[2.5rem]"
+              >
+                15% OFF
+              </h3>
+
+              <p
+                class="custom-black-text font-semibold leading-[1.8] text-sm lg:text-xl"
+              >
+                on your next purchase
+              </p>
+
+              <p
+                class="custom-gray-text-05 leading-[1.8] font-medium text-sm lg:text-lg"
+              >
+                use by January 2024
+              </p>
+            </div>
+
+            <div class="max-h-[150px] lg:max-h-full">
+              <img class="h-full" src="./images/cupon-devider.png" alt="" />
+            </div>
+
+            <div
+              class="font-raleway flex flex-col justify-center text-center lg:ml-5"
+            >
+              <p
+                class="leading-[1.8] font-bold custom-black-text text-xl lg:text-[2rem]"
+              >
+                NEW15
+              </p>
+
+              <p
+                class="custom-gray-text-04 leading-[1.8] font-medium lg:text-xl"
+              >
+                Coupon Code
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button
+            class="border border-[#1dd100] text-[#1dd100] bg-white rounded-xl py-3 px-5 lg:text-xl lg:py-5 lg:px-8"
+          >
+            See All Offers
+          </button>
+        </div>
+      </section>
+      <!-- ? Best offers section ends-->
+    </main>
     <!-- ! Main ends -->
 
     <!-- ! Footer starts -->
