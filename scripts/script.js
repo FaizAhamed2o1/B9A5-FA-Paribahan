@@ -1,5 +1,8 @@
 const newOffer = "NEW15";
+const newOfferOff = 0.15;
 const coupleOffer = "Couple 20";
+const coupleOfferOff = 0.2;
+
 const numberOfSeatsLeft = parseInt(
   document.getElementById("number-of-seats-left").innerText
 );
@@ -7,9 +10,13 @@ const seats = document.getElementsByClassName("seat-number");
 const selectedSeats = [];
 let selectedSeatsList = [];
 let selectedSeatsCounter = 1;
+
 const ticketPrice = 500;
 let totalPrice = 0;
 let grandTotalPrice = 0;
+let discountAmount = 0;
+
+const couponInput = document.getElementById("coupon-input-field");
 
 // !  click event handler for buy tickets button
 document
@@ -57,7 +64,7 @@ for (const seat of seats) {
       }
 
       // enabling the have any coupon section when a seat is selected
-      if (selectedSeats.length != 0) {
+      if (selectedSeats.length === 4) {
         document
           .getElementById("coupon-input-field")
           .removeAttribute("disabled");
@@ -70,3 +77,62 @@ for (const seat of seats) {
     }
   });
 }
+
+// ! coupon apply button event listener
+document
+  .getElementById("coupon-apply-btn")
+  .addEventListener("click", function () {
+    if (couponInput.value !== "") {
+      if (couponInput.value === coupleOffer) {
+        // calculate and set the grandtotal price
+        grandTotalPrice = totalPrice - totalPrice * coupleOfferOff;
+        document.getElementById("show-grand-total-price").innerText =
+          grandTotalPrice;
+
+        // calculate and set the discount amount
+        discountAmount = totalPrice * coupleOfferOff;
+        document.getElementById("show-discount-amount").innerText =
+          discountAmount;
+
+        // hide the coupon input field
+        document.getElementById("coupon-div").classList.add("hidden");
+
+        // show the discount amount div
+        document
+          .getElementById("discount-amount-container")
+          .classList.remove("hidden");
+
+        // hide the warning
+        document
+          .getElementById("invalid-coupon-warning")
+          .classList.add("hidden");
+      } else if (couponInput.value === newOffer) {
+        // calculate and set the grandtotal price
+        grandTotalPrice = totalPrice - totalPrice * newOfferOff;
+        document.getElementById("show-grand-total-price").innerText =
+          grandTotalPrice;
+
+        // calculate and set the discount amount
+        discountAmount = totalPrice * newOfferOff;
+        document.getElementById("show-discount-amount").innerText =
+          discountAmount;
+
+        // hide the coupon input field
+        document.getElementById("coupon-div").classList.add("hidden");
+
+        // show the discount amount div
+        document
+          .getElementById("discount-amount-container")
+          .classList.remove("hidden");
+
+        // hide the warning
+        document
+          .getElementById("invalid-coupon-warning")
+          .classList.add("hidden");
+      } else {
+        document
+          .getElementById("invalid-coupon-warning")
+          .classList.remove("hidden");
+      }
+    }
+  });

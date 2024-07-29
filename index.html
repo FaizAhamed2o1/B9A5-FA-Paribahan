@@ -802,13 +802,21 @@
                 <!-- shows total price of the selected ticket/tickets -->
                 <div class="pricing-and-coupon">
                   <div
-                    class="total-price custom-black-text font-medium flex items-center justify-between mb-2"
+                    class="total-price custom-black-text font-medium flex items-center justify-between mb-3"
                   >
                     <p>Total Price</p>
                     <p>BDT <span id="show-total-price">0</span></p>
                   </div>
 
-                  <div class="coupon relative mb-3">
+                  <div
+                    id="discount-amount-container"
+                    class="total-price custom-black-text font-medium flex items-center justify-between mb-3 text-red-500 hidden"
+                  >
+                    <p>Discount Amount</p>
+                    <p>BDT <span id="show-discount-amount">0</span></p>
+                  </div>
+
+                  <div id="coupon-div" class="coupon relative mb-3">
                     <input
                       disabled
                       class="w-full text-base placeholder:text-sm py-3 pl-4 rounded-xl outline-none"
@@ -827,11 +835,18 @@
                     </button>
                   </div>
 
+                  <p
+                  id="invalid-coupon-warning"
+                    class="warning font-medium text-red-500 my-3 text-xs lg:text-sm hidden"
+                  >
+                    *Invalid Coupon code. Please Try Again
+                  </p>
+
                   <div
                     class="grand-total custom-black-text font-medium flex items-center justify-between"
                   >
                     <p>Grand Total</p>
-                    <p>BDT <span>0</span></p>
+                    <p>BDT <span id="show-grand-total-price">0</span></p>
                   </div>
                 </div>
               </div>
@@ -856,7 +871,7 @@
                   </p>
 
                   <input
-                    class="border border-[#0307121A] rounded-xl p-4 w-full outline-none"
+                    class="border border-[#0307121A] rounded-xl p-4 w-full outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                     type="number"
                     name=""
                     id=""
@@ -875,7 +890,8 @@
                 </div>
 
                 <button
-                  class="text-xl font-extrabold custom-green-bg w-full rounded-xl text-white p-4"
+                  disabled
+                  class="text-xl font-extrabold custom-green-bg w-full rounded-xl text-white p-4 disabled:bg-gray-300 lg:px-5"
                 >
                   Next
                 </button>
