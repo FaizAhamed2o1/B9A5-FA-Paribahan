@@ -6,9 +6,9 @@ const coupleOfferOff = 0.2;
 const numberOfSeatsLeft = parseInt(
   document.getElementById("number-of-seats-left").innerText
 );
+
 const seats = document.getElementsByClassName("seat-number");
 const selectedSeats = [];
-let selectedSeatsList = [];
 let selectedSeatsCounter = 1;
 
 const ticketPrice = 500;
@@ -17,6 +17,8 @@ let grandTotalPrice = 0;
 let discountAmount = 0;
 
 const couponInput = document.getElementById("coupon-input-field");
+
+const userInputFields = document.getElementsByClassName("user-input");
 
 // !  click event handler for buy tickets button
 document
@@ -74,6 +76,13 @@ for (const seat of seats) {
       // counting and updating the value of total price
       totalPrice += ticketPrice;
       document.getElementById("show-total-price").innerHTML = totalPrice;
+
+      //  enabling the input fields when a seat is selected
+      if (selectedSeats.length !== 0) {
+        for (const userInputField of userInputFields) {
+          userInputField.removeAttribute("disabled");
+        }
+      }
     }
   });
 }
@@ -140,9 +149,21 @@ document
 // ! Checking if the phone number input field is empty
 const phoneNumberInputField = document.getElementById("phone-number-input");
 const nextButton = document.getElementById("next-btn");
-if (phoneNumberInputField.value !== "") {
-  nextButton.removeAttribute('disabled');
 
-  // ? adding event listener to the next button
-nextButton.addEventListener('click')
-}
+phoneNumberInputField.addEventListener("input", function () {
+  if (phoneNumberInputField.value !== "") {
+    nextButton.disabled = false;
+
+    // ? adding event listener to the next button
+    nextButton.addEventListener("click", function () {
+      window.location.href = "../pages/success.html";
+    });
+  } else {
+    nextButton.disabled = true;
+  }
+});
+
+// // ? adding event listener to the next button
+// nextButton.addEventListener("click", function () {
+//   window.location.href = "../pages/success.html";
+// });
