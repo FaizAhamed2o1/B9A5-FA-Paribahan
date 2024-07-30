@@ -77,6 +77,11 @@ for (const seat of seats) {
       totalPrice += ticketPrice;
       document.getElementById("show-total-price").innerHTML = totalPrice;
 
+      //  Setting default grand total price
+      grandTotalPrice = totalPrice;
+      document.getElementById("show-grand-total-price").innerText =
+        grandTotalPrice;
+
       //  enabling the input fields when a seat is selected
       if (selectedSeats.length !== 0) {
         for (const userInputField of userInputFields) {
@@ -93,7 +98,7 @@ document
   .addEventListener("click", function () {
     if (couponInput.value !== "") {
       if (couponInput.value === coupleOffer) {
-        // calculate and set the grandtotal price
+        // calculate and set the grandtotal price after applying coupon
         grandTotalPrice = totalPrice - totalPrice * coupleOfferOff;
         document.getElementById("show-grand-total-price").innerText =
           grandTotalPrice;
@@ -116,7 +121,7 @@ document
           .getElementById("invalid-coupon-warning")
           .classList.add("hidden");
       } else if (couponInput.value === newOffer) {
-        // calculate and set the grandtotal price
+        // calculate and set the grandtotal price after applying coupon
         grandTotalPrice = totalPrice - totalPrice * newOfferOff;
         document.getElementById("show-grand-total-price").innerText =
           grandTotalPrice;
@@ -143,6 +148,10 @@ document
           .getElementById("invalid-coupon-warning")
           .classList.remove("hidden");
       }
+    } else {
+      document
+        .getElementById("invalid-coupon-warning")
+        .classList.remove("hidden");
     }
   });
 
