@@ -136,3 +136,13 @@ document
       }
     }
   });
+
+// ! Checking if the phone number input field is empty
+const phoneNumberInputField = document.getElementById("phone-number-input");
+const nextButton = document.getElementById("next-btn");
+if (phoneNumberInputField.value !== "") {
+  nextButton.removeAttribute('disabled');
+
+  // ? adding event listener to the next button
+nextButton.addEventListener('click')
+}
