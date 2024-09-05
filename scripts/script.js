@@ -171,8 +171,3 @@ phoneNumberInputField.addEventListener("input", function () {
     nextButton.disabled = true;
   }
 });
-
-// // ? adding event listener to the next button
-// nextButton.addEventListener("click", function () {
-//   window.location.href = "../pages/success.html";
-// });
